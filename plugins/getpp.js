@@ -1,4 +1,5 @@
-const { cmd } = require('../command');
+const axios = require('axios');
+const fs = require('fs');
 
 cmd({
   pattern: "getpp",
@@ -11,7 +12,7 @@ cmd({
     if (!isOwner) return reply("Owner only!");
 
     const number = args[0]?.replace(/[^0-9]/g, '');
-    if (!number) return reply("ඇතුලත් කරන්න: *getpp 947XXXXXXXX*\n\n *+ ලකුන ඇතුලත් කරන්න එපා❌*");
+    if (!number) return reply("ඇතුලත් කරන්න: *getpp 947XXXXXXXX*");
 
     const jid = number + "@s.whatsapp.net";
 
@@ -22,10 +23,12 @@ cmd({
       return reply("PP not found or privacy restricted.");
     }
 
+    const response = await axios.get(ppUrl, { responseType: 'arraybuffer' });
+    const buffer = Buffer.from(response.data, 'binary');
+
     await conn.sendMessage(m.chat, {
-      image: { url: ppUrl },
-      caption: `*• KING-MS AI •*
-      Profile picture of ${number}`
+      image: buffer,
+      caption: `*• KING-MS AI •*\nProfile picture of ${number}`
     }, { quoted: mek });
 
   } catch (err) {
