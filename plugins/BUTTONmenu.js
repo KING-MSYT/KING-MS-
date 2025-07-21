@@ -27,13 +27,13 @@ cmd({
     { buttonId: `${prefix}owner`, buttonText: { displayText: '👑 Owner' }, type: 1 }
   ];
 
-  const image = { url: "https://i.imgur.com/AxT5fYb.jpeg" }; // Change to your logo/image URL
+  const image = { url: "https://i.imgur.com/AxT5fYb.jpeg" }; // Change this URL if needed
 
   await conn.sendMessage(m.chat, {
-    image,
     caption: text,
-    footer: "🤖 KING-MS BOT by Emalsha",
-    buttons,
-    headerType: 4 // 1 = text only, 4 = image + text + buttons
+    image,
+    footer: "🤖 KING-MS BOT by Ꮇᴀꜰɪᴀ",
+    templateButtons: buttons,
+    headerType: 4 // image with text
   }, { quoted: mek });
 });
