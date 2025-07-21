@@ -18,6 +18,9 @@ cmd({
   ▸ .callspam
   ▸ .alive
   ▸ .owner
+  ▸ .boom
+  ▸ .getpp
+
 
 🔘 Choose a quick option below:`;
 
