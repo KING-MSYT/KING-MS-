@@ -35,7 +35,6 @@ cmd({
 // forward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MSforward.js⏤KING-MS
 
 
-const { cmd } = require('../command');
 
 cmd({
   pattern: "forward",
