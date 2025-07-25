@@ -1,5 +1,5 @@
 {
-  "name": "KING - MS",
+  "name": "KING-MS",
   "version": "1.0.0",
   "description": "A WhatsApp bot created using Node.js",
   "main": "index.js",
@@ -11,8 +11,6 @@
   "dependencies": {
     "@whiskeysockets/baileys": "6.7.18",
     "@adiwajshing/keyed-db": "^0.2.4",
-    {
-  "dependencies": {
     "@dark-yasiya/scrap": "^1.2.7",
     "pino": "^7.0.5",
     "pm2": "^5.2.0",
